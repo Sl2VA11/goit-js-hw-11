@@ -11,6 +11,7 @@
   background-color: rgb(99, 166, 213);
    padding-top: 20px;
    padding-bottom: 50px;
+   margin-bottom: 20px;
 }
 
 .input{
@@ -23,7 +24,7 @@
 .input:placeholder-shown{
    padding-left: 10px;
 }
-.btn{
+.search-btn{
    border-top-left-radius: 10px;
    padding: 10px;
    font-size: 15px;
@@ -31,4 +32,42 @@
    background-color: rgb(243, 234, 234);
    border: none;
    cursor: pointer;
+}
+.gallery{
+   display: flex;
+   flex-wrap: wrap;
+   margin-top: -30px;
+   margin-left: -30px;
+   justify-content: center;
+}
+
+.photo-card{
+   flex-basis: calc(100% / 4 - 30px);
+   margin-top: 30px;
+   margin-left: 30px;
+  
+   border: 2px solid rgb(241, 238, 238);
+      border-radius: 10px;
+      overflow: hidden;
+      transition: all 0.3s;
+}
+.photo-card:hover,
+.photo-card:focus {
+   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 4px 4px rgba(0, 0, 0, 0.06),
+      1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+.gallery-image{
+   display: block;
+   width: 50vh;
+     height: 30vh;
+      object-fit: cover;
+}
+.info{
+   display: flex;
+   justify-content: center;
+   padding: 10px;
+}
+
+.info-item:not(:last-child){
+   margin-right: 20px;
 }
