@@ -18,7 +18,10 @@
     "url": "https://github.com/goitacademy/parcel-project-template/issues"
   },
   "dependencies": {
+    "infinite-scroll": "^4.0.1",
+    "lazysizes": "^5.3.2",
     "modern-normalize": "^1.1.0",
+    "notiflix": "^3.2.5",
     "simplelightbox": "^2.10.3"
   },
   "devDependencies": {
