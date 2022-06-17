@@ -1,22 +1,18 @@
 import SimpleLightbox from 'simplelightbox';
 import 'simplelightbox/dist/simple-lightbox.min.css';
 import { refs } from '../index.js'
-import Notiflix from 'notiflix';
 import 'lazysizes';
-import InfiniteScroll from 'infinite-scroll'
+
+
 const lightbox = new SimpleLightbox('.gallery a', { captionData: 'alt', captionDelay: 250, });
 
 
 
 export default function addPhotoCardMarkup(hits) {
 
-  if (hits.total === 0) {
-      return Notiflix.Notify.failure("Sorry, there are no images matching your search query. Please try again.");
-  } else {
-     
-       refs.divGallery.insertAdjacentHTML('beforeend', makePhotoCardMarkup(hits))
+   refs.divGallery.insertAdjacentHTML('beforeend', makePhotoCardMarkup(hits))
    lightbox.refresh()
-  }
+
    
   
 }
@@ -24,9 +20,8 @@ export default function addPhotoCardMarkup(hits) {
 
 
 
-function makePhotoCardMarkup({hits}) {
-   console.log(hits);
- 
+function makePhotoCardMarkup({ hits }) {
+   
    return hits.map(
     ({ largeImageURL, webformatURL, tags, likes, views,comments, downloads }) =>
       `<div class="photo-card">
