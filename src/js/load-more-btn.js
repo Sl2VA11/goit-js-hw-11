@@ -16,7 +16,7 @@ export default class LoadMoreBtn {
 
   enable() {
     this.refs.button.disabled = false;
-    this.refs.label.textContent = 'Показать ещё';
+    this.refs.label.textContent = 'Show more';
     
   }
 

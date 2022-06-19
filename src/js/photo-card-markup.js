@@ -8,8 +8,9 @@ const lightbox = new SimpleLightbox('.gallery a', { captionData: 'alt', captionD
 
 
 
-export default function addPhotoCardMarkup(hits) {
 
+export default function addPhotoCardMarkup(hits) {
+  
    refs.divGallery.insertAdjacentHTML('beforeend', makePhotoCardMarkup(hits))
    lightbox.refresh()
 
@@ -20,7 +21,7 @@ export default function addPhotoCardMarkup(hits) {
 
 
 
-function makePhotoCardMarkup({ hits }) {
+function makePhotoCardMarkup({hits}) {
    
    return hits.map(
     ({ largeImageURL, webformatURL, tags, likes, views,comments, downloads }) =>

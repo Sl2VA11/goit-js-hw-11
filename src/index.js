@@ -50,7 +50,6 @@ function fetchImages() {
 
    NewApiService.fetchImages().then(({ data }) => {
       
-      console.log(data);
       if (data.total === 0) {
          console.log(data.total);
          Notiflix.Notify.failure("Sorry, there are no images matching your search query. Please try again.");
@@ -58,7 +57,7 @@ function fetchImages() {
 
       }
       
-      photoCardMarkup(data)
+      
      
 
       onLoadMore()
